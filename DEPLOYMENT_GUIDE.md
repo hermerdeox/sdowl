@@ -33,9 +33,10 @@
    - **Output Directory**: `.next`
    - **Install Command**: `npm install`
 
-5. **Environment Variables**
-   - Add `RESEND_API_KEY` if you have email functionality
-   - Set to your Resend API key value
+5. **Environment Variables** (REQUIRED for Email Functionality)
+   - **Key**: `RESEND_API_KEY`
+   - **Value**: `re_BFLF3GPu_GmR8CyA7NsARhMqVNdJDtSCC`
+   - **Important**: This enables appointment email notifications
 
 6. **Deploy**
    - Click "Deploy"
@@ -122,9 +123,20 @@
 - Add your domain in Vercel Dashboard
 - Update DNS settings to point to Vercel
 
-### 2. Environment Variables
-- `RESEND_API_KEY`: For email functionality
-- Add in Vercel Dashboard → Settings → Environment Variables
+### 2. Environment Variables Setup
+**CRITICAL**: Set up the following environment variable in Vercel:
+
+1. **Go to Vercel Dashboard** → Your Project → **Settings** → **Environment Variables**
+2. **Add New Variable**:
+   - **Name**: `RESEND_API_KEY`
+   - **Value**: `re_BFLF3GPu_GmR8CyA7NsARhMqVNdJDtSCC`
+   - **Environment**: Production, Preview, Development (select all)
+3. **Save** and **Redeploy** if already deployed
+
+**What this enables:**
+- ✅ Appointment booking email notifications
+- ✅ Contact form functionality
+- ✅ Automated patient communication
 
 ### 3. Analytics
 - Enable Vercel Analytics in project settings
