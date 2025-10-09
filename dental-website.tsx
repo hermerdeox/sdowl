@@ -119,6 +119,13 @@ export default function SolutionDentalWebsite() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.phone || !formData.date || !formData.time || !formData.reason) {
+      alert('Please fill in all required fields');
+      return;
+    }
+    
     try {
       const response = await fetch('/api/send-appointment-email', {
         method: 'POST',
@@ -126,7 +133,10 @@ export default function SolutionDentalWebsite() {
         body: JSON.stringify(formData)
       });
 
-      if (response.ok) {
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        console.log('Appointment request successful:', result);
         setFormSubmitted(true);
         setTimeout(() => {
           setShowAppointmentForm(false);
@@ -134,10 +144,11 @@ export default function SolutionDentalWebsite() {
           setFormData({ name: '', email: '', phone: '', date: '', time: '', reason: '', message: '' });
         }, 3000);
       } else {
-        alert('Failed to send appointment request. Please call us at (561) 432-1800');
+        console.error('API Error:', result);
+        alert(`Failed to send appointment request: ${result.error || 'Unknown error'}. Please call us at (561) 432-1800`);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Network Error:', error);
       alert('Failed to send appointment request. Please call us at (561) 432-1800');
     }
   };
