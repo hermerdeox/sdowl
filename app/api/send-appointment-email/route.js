@@ -34,7 +34,7 @@ export async function POST(request) {
 
     const data = await resend.emails.send({
       from: 'Solution Dental <onboarding@resend.dev>', // Using Resend's default domain
-      to: ['info@solutiondentallakeworth.com'], // Updated to practice email
+      to: ['solutionsdentaldmd@gmail.com'], // Solution Dental practice Gmail
       replyTo: email,
       subject: `New Appointment Request - ${name}`,
       html: `
@@ -100,6 +100,9 @@ export async function POST(request) {
             <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
               <p style="color: #6b7280; margin: 0; font-size: 14px;">
                 Solution Dental | 3095 S Military Trl #22, Lake Worth Beach, FL 33463 | (561) 432-1800
+              </p>
+              <p style="color: #6b7280; margin: 5px 0 0 0; font-size: 12px;">
+                Email: solutionsdentaldmd@gmail.com
               </p>
             </div>
           </div>

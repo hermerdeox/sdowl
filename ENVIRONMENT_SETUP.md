@@ -53,6 +53,7 @@ RESEND_API_KEY=re_BFLF3GPu_GmR8CyA7NsARhMqVNdJDtSCC
 
 ### Email Features
 - **Appointment Requests**: Sent when patients book appointments
+- **Recipient Email**: `solutionsdentaldmd@gmail.com`
 - **Patient Information**: Name, phone, email, preferred date/time
 - **Reason for Visit**: Captured in booking form
 - **Additional Notes**: Optional patient messages
