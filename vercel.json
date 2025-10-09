@@ -5,9 +5,6 @@
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "env": {
-    "RESEND_API_KEY": "@resend-api-key"
-  },
   "functions": {
     "app/api/send-appointment-email/route.js": {
       "maxDuration": 10

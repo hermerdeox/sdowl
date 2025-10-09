@@ -34,8 +34,11 @@
    - **Install Command**: `npm install`
 
 5. **Environment Variables** (REQUIRED for Email Functionality)
-   - **Key**: `RESEND_API_KEY`
+   - Go to **Project Settings** → **Environment Variables**
+   - Click **"Add New"**
+   - **Name**: `RESEND_API_KEY`
    - **Value**: `re_BFLF3GPu_GmR8CyA7NsARhMqVNdJDtSCC`
+   - **Environments**: Select all (Production, Preview, Development)
    - **Important**: This enables appointment email notifications
 
 6. **Deploy**
