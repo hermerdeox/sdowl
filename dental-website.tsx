@@ -864,7 +864,7 @@ export default function SolutionDentalWebsite() {
 
       {/* Enhanced Cookie Banner */}
       {showCookieBanner && (
-        <div className="fixed bottom-6 right-6 glass-effect rounded-2xl shadow-2xl p-6 max-w-sm z-40 border border-white/20 animate-slideInRight">
+        <div className="fixed bottom-6 left-6 glass-effect rounded-2xl shadow-2xl p-6 max-w-sm z-40 border border-white/20 animate-slideInLeft">
           <div className="flex gap-4">
             <div className="flex-1">
               <h4 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
